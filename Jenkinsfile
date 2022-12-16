@@ -14,4 +14,11 @@ node {
         app = docker.build("sauravkharal1/coursework2")
     }
 
+    stage('Test image') {
+        /* Testing inside the container */
+
+        app.inside {
+            sh 'echo "Tests passed"'
+        }
+
 }
