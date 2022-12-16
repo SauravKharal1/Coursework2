@@ -15,10 +15,12 @@ node {
     }
 
     stage('Test image') {
-        /* Testing inside the container */
+        /* Testing inside of the container */
 
         app.inside {
             sh 'echo "Tests passed"'
+        }
     }
+
 
 }
