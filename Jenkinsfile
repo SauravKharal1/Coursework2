@@ -33,4 +33,8 @@ node {
         }
     }
 
+        sshagent(['my-ssh-key']) {
+             sh 'ssh ubuntu@3.90.222.88 kubectl set image deployments/coursework2 coursework2=sauravkharal/coursework2:$BUILD_NUMBER'
+        }
+
 }
